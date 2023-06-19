@@ -1,0 +1,490 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+html,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 20px;
+  height: 100%;
+  background-color: #333;
+  color: white;
+  scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.fullscreen {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #333;
+  display: flex;
+}
+
+.fullscreen-bg {
+  background: url('../assets/images/kyiz-with-statue.webp') center / cover no-repeat fixed;
+  filter: blur(3px);
+}
+
+
+
+.fullscreen-bg2 {
+  background: url('../assets/images/kyiv-motherland-statue.jpg') center / cover no-repeat fixed;
+  filter: blur(3px);
+}
+
+.bg-box {
+  position: relative;
+}
+
+.fullscreen-bg,
+.fullscreen-bg2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.screen-bg-content {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: #ffffff;
+}
+
+.screen-bg-content h2 {
+  font-size: 65px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.screen-bg-content p {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* header */
+
+.header {
+  width: 100%;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+}
+
+.header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.header__logo {
+  width: 100px;
+}
+
+.navigation {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-site {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 60px;
+}
+
+.nav-site__item {
+  margin-left: 15px;
+}
+
+.nav-site__item:first-child {
+  margin-left: 0;
+}
+
+.nav-site__item a {
+  color: white;
+  text-decoration: none;
+  transition: 0.4s ease;
+}
+
+.nav-site__item a:hover {
+  color: #7979ED;
+}
+
+/* main content - first fullscreen */
+
+.fullscreen-body {
+  width: 100%;
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.fullscreen-body__content {
+  display: flex;
+}
+
+.about,
+.payment {
+  padding: 20px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.about {
+  justify-content: space-around;
+}
+
+.about h1 {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 35px;
+  color: #7979ED;
+}
+
+.about-text p {
+  margin-bottom: 20px;
+}
+
+.bank-card {
+  align-self: center;
+  width: 450px;
+  height: 300px;
+  background-color: #ad76eb6e;
+  border: 1px solid #7979ED;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.bank-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #7979ED;
+}
+
+.bank-card__logo,
+.bank-card__logo2,
+.bank-card__name,
+.bank-card__chip,
+.bank-card__number,
+.form-payment {
+  position: absolute;
+}
+
+.bank-card__logo {
+  top: 30px;
+  right: 30px;
+  width: 70px;
+  height: auto;
+}
+
+.bank-card__logo2 {
+  top: 60px;
+  right: 30px;
+  width: 70px;
+  height: auto;
+}
+
+.bank-card__name {
+  top: 30px;
+  left: 30px;
+}
+
+.bank-card__chip {
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  width: 50px;
+  height: auto;
+}
+
+.bank-card__number {
+  top: 50%;
+  left: 110px;
+  transform: translateY(-50%);
+}
+
+.form-payment {
+  bottom: 40px;
+  left: 30px;
+}
+
+.mono-send {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mono-send__currentValue {
+  border: none;
+  border-bottom: 3px solid blueviolet;
+  color: #7979ED;
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.mono-send__currentValue::placeholder {
+  color: #7979ED;
+}
+
+.mono-send__button {
+  border-radius: 10px;
+  transition: 0.4s ease;
+  margin-left: 40px;
+}
+
+.mono-send__button button{
+  border: none;
+  background-color: #7979ED;
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+
+.mono-send__button span {
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.mono-send__button:hover {
+  transform: scale(0.95);
+  box-shadow: 2px 3px 10px 5px  #babae6;
+}
+
+
+
+.payment-types {
+  width: 100%;
+}
+
+.payment-types__card {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.payment-types__card h3 {
+  font-size: 24px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.payment-types__card>p {
+  margin-bottom: 10px;
+}
+
+
+.donation-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid blueviolet;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.donation-block__text {
+  color: rgb(121, 121, 237);
+}
+
+.donation-block:hover {
+  background-color: rgb(71, 62, 80);
+}
+
+
+/* Second fullscreen -> military help */
+
+.military-help {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 10px;
+}
+
+.military-help h3 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #7979ED;
+  margin-bottom: 40px;
+}
+
+.military-help__container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.military-help__card {
+  width: calc(100% / 3 - 10px);
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  border-radius: 20px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.134);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.military-help__card h4 {
+  color: rgb(195, 143, 244);
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-photo {
+  max-width: 350px;
+  margin-bottom: 20px;
+}
+
+.military-help__card p {
+  margin-bottom: 20px;
+}
+
+.military-help__card .mono-send__button {
+  margin: 0;
+}
+
+/* REPORT SECTION */
+
+.report-box h3 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #7979ED;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.achievements-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.achievements-container__card {
+  width: calc(100% / 3);
+  border: 1px solid #7979ED;
+  border-radius: 15px;
+  background-color: #7979ed7a;
+  padding: 20px 10px;
+}
+
+.achiev-number {
+  font-size: 110px;
+  font-weight: 900;
+  color: #111;
+  text-shadow: 12px 5px 50px white;
+}
+
+.achiev-named {
+  color: #111;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.photo-gallery {
+  padding: 30px 0;
+}
+
+.swiper-wrapper {
+  padding-bottom: 50px;
+}
+
+.swiper-pagination {
+  bottom: 0;
+}
+
+.photo-gallery .swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  border-radius: 0;
+  background-color: #7979ED;
+}
+
+.img-box {
+  text-align: center;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: #7979ED;
+  font-size: 50px;
+  transform: translateY(-10px);
+}
+
+
+/* footer */
+
+.footer {
+  padding: 20px 0;
+  background-color: #111;
+  width: 100%;
+} 
+
+.footer__wrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.foo-navigation {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 40px;
+}
+
+.footer__logo {
+  width: 100px;
+}
+
+.social-network {
+  display: flex;
+}
+
+.social-network__item {
+  margin-left: 10px;
+}
